@@ -1,24 +1,11 @@
-# README
+[![Coverage Status](https://coveralls.io/repos/github/ViktorHek/Test_ruby_on_Rails/badge.svg?branch=master)](https://coveralls.io/github/ViktorHek/Test_ruby_on_Rails?branch=master)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+https://coveralls.io/repos/github/ViktorHek/Test_ruby_on_Rails/badge.svg?branch=master(Coverage Status)!:https://coveralls.io/github/ViktorHek/Test_ruby_on_Rails?branch=master
 
-Things you may want to cover:
+{<img src="https://coveralls.io/repos/github/ViktorHek/Test_ruby_on_Rails/badge.svg?branch=master" alt="Coverage Status" />}[https://coveralls.io/github/ViktorHek/Test_ruby_on_Rails?branch=master]
 
-* Ruby version
+<a href='https://coveralls.io/github/ViktorHek/Test_ruby_on_Rails?branch=master'><img src='https://coveralls.io/repos/github/ViktorHek/Test_ruby_on_Rails/badge.svg?branch=master' alt='Coverage Status' /></a>
 
-* System dependencies
+.. image:: https://coveralls.io/repos/github/ViktorHek/Test_ruby_on_Rails/badge.svg?branch=master
+:target: https://coveralls.io/github/ViktorHek/Test_ruby_on_Rails?branch=master
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
