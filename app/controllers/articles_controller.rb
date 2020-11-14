@@ -13,8 +13,15 @@ class ArticlesController < ApplicationController
   end
 
   def create
-    @article = Article.create(article_params)
+    @article = Article.new(params[:article].permit(:title, :content))
+
+    if @article.save
     redirect_to article_path(@article)
+    flash[:success] = 'Article was successfully created'
+    else 
+      flash.now.alert = "Sorry your article is missing information"
+      render :new
+    end
   end
 
   private 
