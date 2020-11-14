@@ -1,7 +1,7 @@
 feature 'User can create articles' do
     before do
         visit root_path
-        click_on "New Article"
+        click_on "Write an Article"
     end
 
     context "Successfully create an article [Happy Path]" do
@@ -13,7 +13,7 @@ feature 'User can create articles' do
 
         it 'User should be on article show page' do
             article = Article.find_by(title: 'Happy holidays')
-            expect(corrent_path).to eq article_path(article)
+            expect(current_path).to eq article_path(article)
         end
 
         it 'User should see article title' do
