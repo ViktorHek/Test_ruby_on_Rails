@@ -24,6 +24,19 @@ class ArticlesController < ApplicationController
     end
   end
 
+  def edit
+    @article = Article.find(params[:id])
+  end
+
+  def update
+    @article = Article.find(params[:id])
+    if @article.update(article_params)
+      redirect_to @article, notice: 'Article was successfully updated'
+    else 
+      redirect_to edit_article_path, notice: 'Something went wrong, try again'
+    end
+  end
+
   private 
 
   def article_params
