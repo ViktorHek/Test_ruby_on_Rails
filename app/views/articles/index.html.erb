@@ -2,4 +2,20 @@
     <h1><%= link_to article.title, article_path(article) %></h1> <br/>
 <% end %>
 
-<%= link_to "Write an Article", new_article_path%>
+<% if current_admin %>
+
+<%= link_to "Write an Article", new_article_path%> <br/>
+
+<%= link_to 'Sign out', destroy_admin_session_path, method: :delete %>
+
+<% else %>
+
+<%= link_to 'Sign up', new_admin_registration_path %> <br/>
+
+<%= link_to 'Login', new_admin_session_path %> <br/>
+
+<% end %>
+
+
+
+
