@@ -1,4 +1,5 @@
 class ArticlesController < ApplicationController
+  before_action :authenticate_user!
 
   def index
     @articles = Article.all
@@ -14,13 +15,13 @@ class ArticlesController < ApplicationController
 
   def create
     @article = Article.new(params[:article].permit(:title, :content))
-
+    #@article.user = current_user
     if @article.save
     redirect_to article_path(@article)
     flash[:success] = 'Article was successfully created'
     else 
+      redirect_to root_path
       flash.now.alert = "Sorry your article is missing information"
-      render :new
     end
   end
 
@@ -43,4 +44,7 @@ class ArticlesController < ApplicationController
     params.require(:article).permit(:title, :content)
   end
 
+  def set_article
+    @article = Article.find(params[:id])
+  end
 end

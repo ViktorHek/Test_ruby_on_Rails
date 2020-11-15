@@ -3,6 +3,11 @@ feature 'jurnalist can' do
         let(:article) {create(:article, title: 'Some crispy news', content: 'This is very bad content') }
 
         before do
+            visit root_path
+            click_on 'Login'
+            fill_in "Email", with: 'admin@example.com'
+            fill_in "Password", with: 'password'
+            click_on 'Log in'
             visit article_path(article)
             click_on 'Edit Article'
         end
