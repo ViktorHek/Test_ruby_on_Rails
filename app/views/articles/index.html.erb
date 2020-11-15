@@ -1,18 +1,21 @@
+<h1>Home page</h1><br/>
+<h2>please create an acount, if you already have one you can sign in</h2><br/>
+
+<% if current_user %>
+
 <% @articles.each do |article| %>
     <h1><%= link_to article.title, article_path(article) %></h1> <br/>
 <% end %>
 
-<% if current_admin %>
-
 <%= link_to "Write an Article", new_article_path%> <br/>
 
-<%= link_to 'Sign out', destroy_admin_session_path, method: :delete %>
+<%= link_to 'Sign out', destroy_user_session_path, method: :delete %>
 
 <% else %>
 
-<%= link_to 'Sign up', new_admin_registration_path %> <br/>
+<%= link_to 'Sign up', new_user_registration_path %> <br/>
 
-<%= link_to 'Login', new_admin_session_path %> <br/>
+<%= link_to 'Login', new_user_session_path %> <br/>
 
 <% end %>
 
